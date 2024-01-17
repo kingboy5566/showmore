@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style src="./style.css"></style>
+    <title>Show MOre & Show less</title>
+</head>
+
+<body>
+
+    <h2>Coustom Read More & Read Less Button</h2>
+    <p id="pera">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea reiciendis voluptatem labore cupiditate
+        maiores,
+        nobis adipisci impedit dolor. Saepe quibusdam recusandae culpa odio laborum aperiam modi, nam quas deleniti
+        voluptatum?  <span id="text2" style="display:none;">Lorem1 ipsum dolor sit, amet
+            consectetur adipisicing elit. Ullam animi at error non inventore,
+            est voluptatem sunt velit suscipit. Hic ducimus architecto quisquam pariatur est sint eligendi ipsam dicta
+            aspernatur?</span> <span id="text3" style="display:none ;">Lorem2, ipsum dolor sit amet consectetur
+            adipisicing elit. In enim exercitationem
+            nam incidunt obcaecati itaque temporibus quia architecto optio odio! Facere consectetur deserunt a. Magnam
+            praesentium quod fuga consequuntur quibusdam.</span>
+        <span id="text4" style="display:none ;">Lorem3 ipsum dolor sit amet consectetur adipisicing elit. Cumque minus iste blanditiis obcaecati recusandae
+            ratione excepturi consectetur nostrum voluptatum laboriosam assumenda ab quis culpa adipisci facere debitis,
+            ipsam ex porro.</span>
+    </p>
+
+
+
+
+    <button id="btn" onclick="seeMore()" style="display: none;">See More</button>
+    
+
+    <script>
+        var text = document.getElementById("pera").innerText
+        if (text.length > 50) {
+            
+            btn = document.getElementById("btn").style.display = "block"
+        }
+         var text2 = document.getElementById("text2");
+            var btn = document.getElementById("btn");
+            var text3 = document.getElementById("text3");
+            var text4 = document.getElementById("text4");
+        function seeMore() {
+            
+            var text2 = document.getElementById("text2");
+            var btn = document.getElementById("btn");
+            var text3 = document.getElementById("text3");
+            var text4 = document.getElementById("text4");
+            if (text2.style.display === "none") {
+                
+                text2 = document.getElementById("text2").style.display = "block"
+            } else if (text3.style.display === "none") {
+                text3.style.display = "inline";
+                btn.innerText ="See More"
+            }else if (text4.style.display === "none") {
+                text4 = document.getElementById("text4").style.display ="inline"
+                text4 = document.getElementById("text4").style.display ="block"
+                btn.innerText ="See less"
+            }else {
+                
+    
+                text2.style.display = "none"
+                text3.style.display = "none";
+                text4.style.display = "none";
+                btn.innerText = 'Show More'
+            }
+        }
+
+      
+    </script>
+</body>
+
+</html>
